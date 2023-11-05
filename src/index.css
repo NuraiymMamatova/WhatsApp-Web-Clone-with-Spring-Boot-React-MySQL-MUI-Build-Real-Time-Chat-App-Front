@@ -1,13 +1,39 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  max-width: 100vw;
+  background-color: #e9e9e9;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* home page css */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: gray;
+}
+
+/* progress bar css */
+.progress-bar-container {
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  border-radius: 4px;
+  overflow: hidden;
+  opacity: 0.5;
+  transition: opacity 0.3s ease-out;
+  margin: 1rem;
+}
+
+.progress-bar-container .active {
+  opacity: 1;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: rgb(39, 39, 255);
+  border-radius: 4px;
 }
